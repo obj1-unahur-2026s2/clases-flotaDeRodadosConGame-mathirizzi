@@ -30,7 +30,7 @@ class Dependencia {
   
   method colorDelRodadoMasRapido() = flotaDeRodados.max(
     { r => r.velocidadMaxima() }
-  )
+  ).color()
   
   method capacidadFaltante() = empleados - flotaDeRodados.sum(
     { r => r.capacidad() }
