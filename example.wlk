@@ -69,12 +69,20 @@ object trafic {
   
   method motor() = motor
   
-  method cambiarInterior() {
+  method cambiarAInteriorPopular() {
     interior = interiorPopular
   }
   
-  method cambiarMotor() {
+  method cambiarAMotorBataton() {
     motor = motorBataton
+  }
+  
+  method cambiarAInteriorComodo() {
+    interior = interiorComodo
+  }
+  
+  method cambiarAMotorPulenta() {
+    motor = motorPulenta
   }
   
   method color() = "blanco"
