@@ -32,7 +32,9 @@ class Dependencia {
     { r => r.velocidadMaxima() }
   )
   
-  method capacidadFaltante() = empleados - flotaDeRodados.size()
+  method capacidadFaltante() = empleados - flotaDeRodados.sum(
+    { r => r.capacidad() }
+  )
   
   method esGrande() = (empleados >= 40) and (flotaDeRodados.size() >= 5)
 }
