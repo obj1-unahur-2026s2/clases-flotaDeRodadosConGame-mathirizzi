@@ -1,4 +1,12 @@
 object municipalidad {
+  const dependencias = #{}
+  
+  method agregarDependencia(dependencia) {
+    dependencias.add(dependencia)
+  }
+}
+
+class Dependencia {
   const flotaDeRodados = []
   const empleados = []
   
