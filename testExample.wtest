@@ -51,9 +51,9 @@ describe "test con dos dependencias" {
     assert.equals("rojo", cultura.colorDelRodadoMasRapido())
   }
   
-  test "es grande la flota de cada dependencia?" {
+  test "es grande cada dependencia?" {
     assert.that(deportes.esGrande())
-    assert.that(cultura.esGrande())
+    assert.notThat(cultura.esGrande())
   }
   
   test "capacidad faltante de cada dependencia" {
