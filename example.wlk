@@ -8,7 +8,7 @@ object municipalidad {
 
 class Dependencia {
   const flotaDeRodados = []
-  const empleados = []
+  const empleados
   
   method agregarAFlota(rodado) {
     flotaDeRodados.add(rodado)
@@ -32,9 +32,9 @@ class Dependencia {
     { r => r.velocidadMaxima() }
   )
   
-  method capacidadFaltante() = empleados.size() - flotaDeRodados.size()
+  method capacidadFaltante() = empleados - flotaDeRodados.size()
   
-  method esGrande() = (empleados.size() >= 40) and (flotaDeRodados.size() >= 5)
+  method esGrande() = (empleados >= 40) and (flotaDeRodados.size() >= 5)
 }
 
 class ChevroletCorsa {
