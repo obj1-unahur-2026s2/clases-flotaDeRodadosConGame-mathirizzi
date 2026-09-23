@@ -35,4 +35,29 @@ describe "test con dos dependencias" {
     assert.equals(6450, deportes.pesoTotalFlota())
     assert.equals(10700, cultura.pesoTotalFlota())
   }
+  
+  test "esta bien equipada la flota de cada dependencia?" {
+    assert.that(deportes.estaBienEquipada())
+    assert.notThat(cultura.estaBienEquipada())
+  }
+  
+  test "capacidad total en color azul de cada dependencia" {
+    assert.equals(7, deportes.capacidadTotalEnColor("azul"))
+    assert.equals(10, cultura.capacidadTotalEnColor("azul"))
+  }
+  
+  test "color del rodado mas rapido en cada dependencia" {
+    assert.equals("beige", deportes.colorDelRodadoMasRapido())
+    assert.equals("rojo", cultura.colorDelRodadoMasRapido())
+  }
+  
+  test "es grande la flota de cada dependencia?" {
+    assert.that(deportes.esGrande())
+    assert.that(cultura.esGrande())
+  }
+  
+  test "capacidad faltante de cada dependencia" {
+    assert.equals(25, deportes.capacidadFaltante())
+    assert.equals(5, cultura.capacidadFaltante())
+  }
 }
